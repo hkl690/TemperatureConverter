@@ -17,6 +17,7 @@ namespace TemperatureConverter.ViewModels
         public TemperatureViewModel()
         {
             ConvertCommand = new RelayCommand(ConvertTemperatures);
+            ClearCommand = new RelayCommand(ClearFields);
         }
 
         public double Celsius
@@ -38,11 +39,19 @@ namespace TemperatureConverter.ViewModels
         }
 
         public ICommand ConvertCommand { get; private set; }
+        public ICommand ClearCommand { get; private set; }
 
         private void ConvertTemperatures(object obj)
         {
             Fahrenheit = (Celsius * 9.0 / 5.0) + 32;
             Kelvin = Celsius + 273.15;
+        }
+
+        private void ClearFields(object obj)
+        {
+            Celsius = 0;
+            Fahrenheit = 0;
+            Kelvin = 0;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

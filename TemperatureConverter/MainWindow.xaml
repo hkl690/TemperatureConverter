@@ -18,5 +18,7 @@
         <TextBox Name="txtKelvin" HorizontalAlignment="Left" Height="23" Margin="90,90,0,0" TextWrapping="Wrap" Text="{Binding Kelvin, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
 
         <Button Content="Convert" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top" Width="75" Command="{Binding ConvertCommand}"/>
+        <Button Content="Clear" HorizontalAlignment="Left" Margin="100,130,0,0" VerticalAlignment="Top"
+                Width="75" Command="{Binding ClearCommand}"/>
     </Grid>
 </Window>
